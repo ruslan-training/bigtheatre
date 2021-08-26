@@ -303,11 +303,16 @@ h2 {
     display: flex;
     justify-content: space-between;
 }
+.contacts {
+    display: flex;
+    flex-basis: 40%;
+}
 .contacts ul {
     list-style: none; 
     font-family: "Open Sans Condensed";
     font-weight: 700;
     font-size: 16px;
+    line-height: 38px;
     letter-spacing: 0.05em;
     text-transform: uppercase; 
 }
@@ -337,7 +342,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-left: 125px;
+    margin-left: 60px;
 }
 .form {
     display: flex;
