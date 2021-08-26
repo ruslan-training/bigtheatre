@@ -331,6 +331,7 @@ h2 {
     line-height: 150%;
     color: #989898;
     padding: 10px;
+    resize: none;
 }
 .forms {
     display: flex;
