@@ -183,7 +183,7 @@ h2 {
 }
 .perfomance__images {
     display: flex;
-    padding-left: 150px;
+    justify-content: flex-end;;
 }
 .perfomance__images img {
     display: block;
@@ -239,7 +239,8 @@ h2 {
     font-size: 18px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    transform: rotate(-90deg) translate(150px, -120px);
+    transform-origin: left;
+    transform: rotate(-90deg) translate(12px, 22px);
 }
 
 /* AWARDS */
