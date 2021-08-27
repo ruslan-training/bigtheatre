@@ -12,10 +12,26 @@
 
 <body>
 
-<!-- HEADER -->
+<!-- header -->
 
 <div class="header">
-        <!-- <div class="contacts-slider"></div> -->
+        <!-- <div class="side-bar">
+            <div class="side-bar__text">контактная информация</div>
+            <div class="side-bar__icons">
+                <div class="side-bar__icon">
+                    <a href="#"><img src="img/slider/01.svg" alt=""></a>
+                </div>
+                <div class="side-bar__icon">
+                    <a href="#"><img src="img/slider/02.svg" alt=""></a>
+                </div>
+                <div class="side-bar__icon">
+                    <a href="#"><img src="img/slider/03.svg" alt=""></a>
+                </div>
+                <div class="side-bar__icon">
+                    <a href="#"><img src="img/slider/04.svg" alt=""></a>
+                </div>
+            </div>
+        </div> -->
     <div class="container">          
         <div class="header-inner">
             <nav class="top-menu">
@@ -91,7 +107,7 @@
                     </div>
                 </div>
                 <div class="theatre-box__element">
-                    <img src="img/body/03.png" alt="">
+                    <img class="theatre-box-img" src="img/body/03.png" alt="">
                 </div>
 
             </div>
@@ -99,52 +115,54 @@
     </div>       <!--container-->
 </div>           <!--header-->
 <div class="perfomance">
-    <h2><span class="gold-text">наши</span> постановки</h2>
-    <div class="perfomance__images">
-        <div class="img-box">
-            <div class="text-preview">
-                <div class="party">ОСКАР 2020</div> 
-                <div class="month">сентябрь 2020</div>                     
-            </div>
-            <a href="#"><img src="img/body/04.png" alt=""></a>
-            <div class="look">
-                <img src="img/body/08.svg" alt="">
-            </div>
-        </div>    
-        <div class="img-box">
-                <a href="#"><img src="img/body/05.png" alt=""></a>
+    <div class="container _perfomance">
+        <h2><span class="gold-text">наши</span> постановки</h2>
+        <div class="perfomance__images">
+            <div class="img-box">
                 <div class="text-preview">
                     <div class="party">ОСКАР 2020</div> 
                     <div class="month">сентябрь 2020</div>                     
                 </div>
+                <a href="#"><img src="img/body/04.png" alt=""></a>
                 <div class="look">
                     <img src="img/body/08.svg" alt="">
                 </div>
-        </div> 
-        <div class="img-box">
-            <div class="text-preview">
-                <div class="party">золотой грамофон</div> 
-                <div class="month">июль 2020</div>                     
-            </div>
-            <a href="#"><img src="img/body/06.png" alt=""></a>
-            <div class="look">
-                <img src="img/body/08.svg" alt="">
-            </div>
-        </div> 
-        <div class="img-box">
-            <div class="text-preview">
-                <div class="party">щелкунчик</div> 
-                <div class="month">май 2020</div>                     
-            </div>
-            <a href="#"><img src="img/body/07.png" alt=""></a>
-            <div class="look">
-                <img src="img/body/08.svg" alt="">
+            </div>    
+            <div class="img-box">
+                    <a href="#"><img src="img/body/05.png" alt=""></a>
+                    <div class="text-preview">
+                        <div class="party">ОСКАР 2020</div> 
+                        <div class="month">сентябрь 2020</div>                     
+                    </div>
+                    <div class="look">
+                        <img src="img/body/08.svg" alt="">
+                    </div>
+            </div> 
+            <div class="img-box">
+                <div class="text-preview">
+                    <div class="party">золотой грамофон</div> 
+                    <div class="month">июль 2020</div>                     
+                </div>
+                <a href="#"><img src="img/body/06.png" alt=""></a>
+                <div class="look">
+                    <img src="img/body/08.svg" alt="">
+                </div>
+            </div> 
+            <div class="img-box">
+                <div class="text-preview">
+                    <div class="party">щелкунчик</div> 
+                    <div class="month">май 2020</div>                     
+                </div>
+                <a href="#"><img src="img/body/07.png" alt=""></a>
+                <div class="look">
+                    <img src="img/body/08.svg" alt="">
+                </div>
             </div>
         </div>
-    </div>
+    </div>    
 </div>
 <div class="awards">
-    <div class="container">
+    <div class="container _award">
         <div class="awards-inner">
             <div class="awards-years">2018<br> 2019<br> 2020<br></div>
             <div class="awards-box">   
@@ -223,15 +241,25 @@
                     
                         <input type="email" name="Email" placeholder="E-mail">
                     </div> 
-                    <div class="form">
+                    <div class="form _area">
                         <textarea class="textarea" placeholder="Сообщение"></textarea>
-                    </div>       
-                    <div class="feedback">
-                        <div class="forms__text">* Ваши данные не будут переданы третьим лицам, 100%<br> вероятность. Конфиденциальность мы гарантируем, и защищаем<br> персональные данные согласно законку ФЗ-52.</div>
-                        <button class="button">отправить</button>
-                    </div>    
+                    </div>             
                 </div>
             </form>
+        </div>
+        <div class="feedback">
+            <div class="forms__text">* Ваши данные не будут переданы третьим лицам, 100%<br> вероятность. Конфиденциальность мы гарантируем, и защищаем<br> персональные данные согласно законку ФЗ-52.</div>
+            <button formmethod="POST" class="button">отправить</button>
+        </div> 
+        <div class="contacts-media">
+            <div class="contacts-media__phone">
+               <div class="phone-number">+7 (812) 123-45-55</div>  
+               <div class="phone-number">+7 (812) 123-45-66</div>
+            </div>
+            <div class="contacts-media__adress">
+                <div class="mail">info@theater.ru</div> 
+                <div class="adress">г. санкт-петербург, невский 140</div> 
+            </div>
         </div>
     </div>        
 </div>

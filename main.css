@@ -22,7 +22,47 @@ body {
 }
 
 .header {
+    position: relative;
     background: url(img/header/01.png) no-repeat center/ cover;
+}
+
+/* SLIDER */
+
+.side-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 150px;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.75);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.side-bar__icon img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+.side-bar__icons {
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+.side-bar__text {
+    font-family: "Open Sans Condensed";
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #C4C4C4;
+
+    transform: rotate(-90deg) translate(0px, 0px);
+    transform-origin: left;
 }
 
 /* TOP MENU */
@@ -162,6 +202,12 @@ h2 {
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
+.about__text {
+    font-family: "Open Sans";
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+}
 .about-sit-places__icon {
     margin-bottom: 10px;
 }
@@ -176,8 +222,12 @@ h2 {
     margin-bottom: 15px;
 }
 
+
 /* PERFOMANCE */
 
+.container._perfomance {
+    max-width: 100%;
+}
 .perfomance {
     margin-bottom: 150px;
 }
@@ -293,10 +343,12 @@ h2 {
     justify-content: center;
 }
 .donate-icon {
-    margin: 0 30px;
+    margin: 0 20px;
 }
     /* FORM */
-
+.contacts-media {
+    display: none;
+}
 .partners{
     margin-bottom: 80px;
 }
@@ -341,25 +393,29 @@ h2 {
 }
 .forms {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin-left: 60px;
+    margin-left: 50px;
 }
 .form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 0 30px 0 0;
+}
+.form._area {
+    margin: 0;
 }
 .forms__text {
     font-family: "Open Sans";
     font-weight: 400;
     font-size: 12px;
     color: #989898;
+    margin: 0px 240px 0 0;
 }
 .feedback {
     display: flex;
     flex-basis: 100%;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     margin-top: 40px;
 }
@@ -382,4 +438,86 @@ h2 {
     font-size: 12px;
     line-height: 150%;
     color: #989898;
+}
+@media (max-width: 1040px) {
+    .container {
+        width: 100%;
+        max-width: 722px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    .top-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .slider{
+        display: none;
+    }
+    .top-menu__link:last-child {
+        margin: 50px auto;
+    }
+    .theatre-box-img {
+        display: none;
+    }
+    .perfomance__images {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+    .container._perfomance {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    .img-box img {
+        display: block;
+        max-width: 440px;
+        height: auto;
+        width: auto;
+    }
+    .donate-icons {
+        overflow: hidden;
+    }
+    .donate-icon {
+        margin: 0 10px;
+    }
+    .donate-icon img {
+        width: 100%;
+        height: auto;
+    }
+    .contacts {
+        display: none;
+    }
+    .forms {
+        margin: 0;
+    }
+    .forms textarea {
+        width: 270px;
+    }
+   .feedback    {
+       justify-content: space-between;
+       margin-bottom: 80px;
+   }
+   .forms__text {
+       margin: 0;
+   }
+   .contacts-media {
+       height: 60px;
+       display: flex;
+       justify-content: space-between;
+   }
+   .contacts-media {
+    font-family: "Open Sans Condensed";
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+   }
+   .contacts-media__phone, .contacts-media__adress {
+       display: flex;
+       justify-content: space-between;
+       flex-direction: column;
+   }
 }
