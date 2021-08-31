@@ -11,6 +11,8 @@
 </head>
 
 <body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="js/script.js"></script>
 
 <!-- header -->
 
@@ -34,19 +36,33 @@
         </div> -->
     <div class="container">          
         <div class="header-inner">
+            <div class="header__burger">
+                <span></span>
+            </div>
             <nav class="top-menu">
-                <a class="top-menu__link" href="#">Главная</a>
-                <a class="top-menu__link" href="#">о театре</a>
-                <a class="top-menu__link" href="#">Наши постановки</a>
-                <a class="top-menu__link" href="#">партнеры театра</a>
-                <a class="top-menu__link" href="#">контакты</a>
-                <a class="top-menu__link" href="#">+7 495 123-45-67</a>
+                <ul class="top-menu-adaptive">
+                    <li><a class="top-menu-adaptive__link" href="#">Главная</a></li>
+                    <li><a class="top-menu-adaptive__link" href="#">о театре</a></li>
+                    <li><a class="top-menu-adaptive__link" href="#">Наши постановки</a></li>
+                    <li><a class="top-menu-adaptive__link" href="#">партнеры театра</a></li>
+                    <li><a class="top-menu-adaptive__link" href="#">контакты</a></li>   
+                </ul>  
+                <div class="adaptive-icons">
+                    <div class="adaptive-icon"><a href="#"><img src="img/adaptive-menu/01.svg" alt=""></a></div>
+                    <div class="adaptive-icon"><a href="#"><img src="img/adaptive-menu/02.svg" alt=""></a></div>
+                    <div class="adaptive-icon"><a href="#"><img src="img/adaptive-menu/03.svg" alt=""></a></div>
+                    <div class="adaptive-icon"><a href="#"><img src="img/adaptive-menu/04.svg" alt=""></a></div>
+                </div>
+                <a class="top-menu-adaptive__link tel-number" href="#">+7 495 123-45-67</a>                 
             </nav>
+            <div class="header-inner__phone">
+                <a class="header-inner__phone-link" href="#">+7 495 123-45-67</a>
+            </div>    
             <div class="header-inner__content">
                 <div class="history">
                     <h1>Большой театр</h1>
                     <div class="history__text">
-                        Большо́й теа́тр — петербургский театр, существовавший в 1784—1886 годах,<br> с 1886 года — Петербургская консерватория. Первое постоянное в<br> Санкт-Петербурге, крупнейшее в России и одно из крупнейших театральных<Br> зданий в Европе XVIII.
+                        <p>Большо́й теа́тр — петербургский театр, существовавший в 1784—1886 годах,<br> с 1886 года — Петербургская консерватория. Первое постоянное в<br> Санкт-Петербурге, крупнейшее в России и одно из крупнейших театральных<Br> зданий в Европе XVIII.</p>
                     </div>
                     <div class="button">афиша</div>
                 </div>
@@ -87,7 +103,7 @@
                         Самый лучший театр СПБ
                     </div>
                     <div class="about-text">
-                        Как свидетельствуют архивные документы, первое каменное<br> здание Большого театра начали возводить в 1775 году по<br> проекту Антонио Ринальди. В дальнейшем, после того как<br> Ринальди упал с лесов и не мог лично наблюдать за ходом<br> работ, Екатерина II поручила немецкому театральному<br> декоратору и архитектору Людвигу Филиппу Тишбейну создать<br> новый проект театра, который и был воплощён архитекторами<br> Ф. В. фон Бауром и М. А. Деденёвым. Открытие его состоялось в<br> 1783 году, хотя, основываясь на других свидетельствах, годом<br> открытия можно считать 1784 год.
+                        <p>Как свидетельствуют архивные документы, первое каменное здание Большого театра начали возводить в 1775 году по проекту Антонио Ринальди. В дальнейшем, после того как Ринальди упал с лесов и не мог лично наблюдать за ходом работ, Екатерина II поручила немецкому театральному декоратору и архитектору Людвигу Филиппу Тишбейну создать новый проект театра, который и был воплощён архитекторами Ф. В. фон Бауром и М. А. Деденёвым. Открытие его состоялось в 1783 году, хотя, основываясь на других свидетельствах, годом открытия можно считать 1784 год.</p>
                     </div>
                 </div>
                 <div class="theatre-box__element">
@@ -95,15 +111,18 @@
                         немного о цифрах
                     </div>
                     <div class="about-sit-places">
-                        <div class="about-sit-places__icon">
-                            <img src="img/body/01.svg" alt="">
-                        </div>    
-                        <div class="about-sit-places__text _st"><span class="gold-text">1600</span> посадочный мест</div>
-                        <div class="about-sit-places__icon">
-                            <img src="img/body/02.svg" alt="">
-                        </div> 
-                        <div class="about-sit-places__text"><span class="gold-text">350</span> лет истории</div>
-                        
+                        <div class="adaptive-sits">
+                            <div class="about-sit-places__icon">
+                                <img src="img/body/01.svg" alt="">
+                            </div>    
+                            <div class="about-sit-places__text _st"><span class="gold-text">1600</span> посадочный мест</div>
+                        </div>
+                        <div class="adaptive-sits">
+                            <div class="about-sit-places__icon">
+                                <img src="img/body/02.svg" alt="">
+                            </div> 
+                            <div class="about-sit-places__text"><span class="gold-text">350</span> лет истории</div>
+                        </div>
                     </div>
                 </div>
                 <div class="theatre-box__element">
@@ -115,7 +134,7 @@
     </div>       <!--container-->
 </div>           <!--header-->
 <div class="perfomance">
-    <div class="container _perfomance">
+    <div class="container _perf">
         <h2><span class="gold-text">наши</span> постановки</h2>
         <div class="perfomance__images">
             <div class="img-box">
@@ -228,27 +247,27 @@
                     <li>г. санкт-петербург, невский 140</li>
                 </ul>
             </div>
-            <form method="post" action="#" enctype="multipart/form-data">
-                <div class="forms">   
+            <div class="forms">  
+                <form method="post" action="#" enctype="multipart/form-data"></form> 
+                <div class="forms-input">   
                     <div class="form">
-                        <input type="text" name="name" placeholder="Имя">
-                    
-                        
+                        <input type="text" name="name" placeholder="Имя"> 
                         <input type="text" name="company" placeholder="Компания">
                     </div> 
+                    
                     <div class="form">
                         <input type="tel" name="phone" placeholder="Телефон">
-                    
                         <input type="email" name="Email" placeholder="E-mail">
                     </div> 
-                    <div class="form _area">
-                        <textarea class="textarea" placeholder="Сообщение"></textarea>
-                    </div>             
+                    
                 </div>
-            </form>
+                <div class="area">
+                    <textarea class="textarea" placeholder="Сообщение"></textarea>
+                </div>
+            </div>
         </div>
         <div class="feedback">
-            <div class="forms__text">* Ваши данные не будут переданы третьим лицам, 100%<br> вероятность. Конфиденциальность мы гарантируем, и защищаем<br> персональные данные согласно законку ФЗ-52.</div>
+            <p class="forms__text">* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</p>
             <button formmethod="POST" class="button">отправить</button>
         </div> 
         <div class="contacts-media">

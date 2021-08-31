@@ -20,50 +20,20 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
+.container._perf {
+    max-width: 100%;
+}
 
 .header {
     position: relative;
     background: url(img/header/01.png) no-repeat center/ cover;
 }
+.header__burger {
+    display: none;
+}
 
 /* SLIDER */
 
-.side-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 150px;
-    height: 100%;
-    background: rgba(51, 51, 51, 0.75);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.side-bar__icon img {
-    width: 100%;
-    display: block;
-    height: auto;
-}
-.side-bar__icons {
-    height: 170px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 60px;
-}
-.side-bar__text {
-    font-family: "Open Sans Condensed";
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #C4C4C4;
-
-    transform: rotate(-90deg) translate(0px, 0px);
-    transform-origin: left;
-}
 
 /* TOP MENU */
 .top-menu {
@@ -71,17 +41,28 @@ body {
     justify-content: space-between;
     padding: 50px 0 0 0;
 }
-.top-menu__link {
+.top-menu-adaptive {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;    
+}
+.top-menu-adaptive li {
+    margin-right: 40px;
+}
+.top-menu-adaptive__link {
     font-family: "Open Sans Condensed";
     font-weight: 700;
     font-size: 18px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
-.top-menu__link:last-child {
+.tel-number {
     border-bottom: 2px solid #D1A954;
-    margin-left: 160px;
 }
+.header-inner__phone, .adaptive-icons {
+    display: none;
+}
+
 
 /* HEADER content left side */
 
@@ -103,6 +84,14 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.history__text p {
+    font-family: "Open Sans";
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    max-width: 525px;
+    width: 100%;
 }
 .button {
     background-color: #D1A954;
@@ -207,6 +196,9 @@ h2 {
     font-weight: normal;
     font-size: 14px;
     line-height: 150%;
+}
+.about-text p {
+    max-width: 420px;
 }
 .about-sit-places__icon {
     margin-bottom: 10px;
@@ -358,7 +350,6 @@ h2 {
 }
 .contacts {
     display: flex;
-    flex-basis: 40%;
 }
 .contacts ul {
     list-style: none; 
@@ -368,6 +359,10 @@ h2 {
     line-height: 38px;
     letter-spacing: 0.05em;
     text-transform: uppercase; 
+}
+.forms-input {
+    display: flex;
+    flex-wrap: wrap;
 }
 .forms input {
     width: 180px;
@@ -381,7 +376,7 @@ h2 {
     padding: 10px;
 }
 .forms textarea {
-    width: 310px;
+    min-width: 310px;
     height: 100px;
     background: #444444;
     font-family: "Open Sans";
@@ -391,18 +386,18 @@ h2 {
     padding: 10px;
     resize: none;
 }
-.forms {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 50px;
-}
 .form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 30px 0 0;
+    height: 100px;
+    margin-right: 30px;
 }
-.form._area {
+.forms {
+    display: flex;
+    justify-content: space-between;
+}
+.area {
     margin: 0;
 }
 .forms__text {
@@ -410,14 +405,16 @@ h2 {
     font-weight: 400;
     font-size: 12px;
     color: #989898;
-    margin: 0px 240px 0 0;
+    margin: 0px 180px 0 0;
+
+    max-width: 390px;
+    width: 100%;
+    text-align: left;
 }
 .feedback {
     display: flex;
-    flex-basis: 100%;
     justify-content: flex-end;
     align-items: center;
-    margin-top: 40px;
 }
 .feedback .button {
     border: 0;
@@ -439,23 +436,50 @@ h2 {
     line-height: 150%;
     color: #989898;
 }
-@media (max-width: 1040px) {
+@media (max-width: 1054px) {
+    .contacts {
+        flex-basis: 20%;
+    }
+}
+@media (max-width: 992px) {
     .container {
         width: 100%;
         max-width: 722px;
         margin: 0 auto;
         padding: 0 15px;
     }
+    .container._award{
+        max-width: 100%;
+        width: 100%;
+    }
     .top-menu {
+        flex-wrap: wrap;
+    }
+    .top-menu-adaptive {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    .slider{
+    .top-menu-adaptive li {
+        margin-right: 20px;
+    }
+    .adaptive-icons, .slider, .tel-number {
         display: none;
     }
-    .top-menu__link:last-child {
-        margin: 50px auto;
+    .header-inner__phone {
+        display: flex;
+        justify-content: center;
+
+        margin: 50px auto 0;
+    }
+    .header-inner__phone-link {
+        display: block;
+        font-family: "Open Sans Condensed";
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        border-bottom: 2px solid #D1A954;
     }
     .theatre-box-img {
         display: none;
@@ -464,23 +488,23 @@ h2 {
         flex-wrap: nowrap;
         overflow: hidden;
     }
-    .container._perfomance {
-        width: 100%;
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
     .img-box img {
         display: block;
         max-width: 440px;
         height: auto;
         width: auto;
     }
+    .awards-inner   {
+        transform: translate(-10px,0px);
+        background-size: 120%;
+        background-position: left center;
+    }
     .donate-icons {
+        max-height: 265px;
         overflow: hidden;
     }
     .donate-icon {
-        margin: 0 10px;
+        margin: 15px 10px;
     }
     .donate-icon img {
         width: 100%;
@@ -493,11 +517,11 @@ h2 {
         margin: 0;
     }
     .forms textarea {
-        width: 270px;
+        min-width: 270px;
     }
    .feedback    {
        justify-content: space-between;
-       margin-bottom: 80px;
+       margin: 40px 0 80px;
    }
    .forms__text {
        margin: 0;
@@ -520,4 +544,292 @@ h2 {
        justify-content: space-between;
        flex-direction: column;
    }
+   .contacts-media__adress {
+    text-align: right;
+   }
+}
+@media(max-width:768px) {
+    body.lock {
+        overflow: hidden;
+    }
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0px 20px;
+    }
+    h2, .donate, .awards, .perfomance {
+        margin-bottom: 60px;
+    }
+    .header-inner {
+        padding: 50px 0 0 0;
+    }
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 33px;
+        height: 20px;
+        z-index: 11;
+    }
+    .header__burger::after, .header__burger::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger::after {
+        top: 0;
+    }
+    .header__burger::before {
+        bottom: 0;
+    }
+    .header__burger span {
+        position: absolute;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+    }
+    .top-menu-adaptive {
+       display: block;
+       margin-bottom: 90px;
+    }
+    .top-menu-adaptive li {
+        list-style: none;
+        text-align: left;
+        margin: 0 0px 35px 40px;
+    }
+    .top-menu {
+        background: #333333;
+        left: 0;
+        top: -100%;
+        position: fixed;
+        width: 300px;
+        height: 800px;
+        transition: all 0.3s ease 0s;
+        overflow: auto;
+        display: none;
+    }
+    .top-menu.active {
+        top: 0;
+        display: block;
+        overflow: auto;
+        padding: 55px 0;
+    }
+    .header__burger.active {
+        transform: translate(200px, 0px);
+        transition: transform .1s ease;
+    }
+    .header__burger.active::before {
+        transform: rotate(45deg);
+        top: 13px;
+    }
+    .header__burger.active::after {
+        transform: rotate(-45deg);
+        top: 13px;
+    }
+    .header__burger.active span {
+        transform: scale(0);
+    }
+    .head__name {
+        transform: translate(0px, -10px);
+    }
+    .header-inner__phone {
+        display: flex;
+        justify-content: flex-end;
+
+        margin: -20px 0 0 0;
+    }
+    .adaptive-icons {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 80px;
+    }
+    .adaptive-icons img {
+        width: 100%;
+    }
+    .adaptive-icon {
+        flex-shrink: 0;
+    }
+    .adaptive-icon:first-child {
+        margin: 0 60px 50px 0;
+    }
+    .about-theatre-inner    {
+        padding: 60px 0;
+    }
+    .about-title {
+        font-size: 18px;    
+    }
+    .awards-inner {
+        padding: 0;
+    }
+    .awards-years {
+        font-size: 48px;
+        letter-spacing: 0;
+    }
+    .stars-text {
+        font-size: 22px;
+    }
+    .form {
+        margin: 0 15px 0 0;
+    }
+    .forms {
+        flex-basis: 100%;
+    }
+    .forms input {
+        width: 150px;
+    }
+    .forms textarea {
+        width: 150px;
+    }
+    .forms-input {
+        flex-basis: 67%;
+    }
+    .area {
+        flex-basis: 40%;
+    }
+}
+@media (max-width:640px) {
+    h1 {
+        font-size: 48px;
+        letter-spacing: 0;
+    }
+    h2 {
+        font-size: 32px;
+        letter-spacing: 0;
+    }
+    h2, .donate, .awards, .perfomance {
+        margin-bottom: 40px;
+    }
+    .theatre-box {
+        flex-direction: column;
+    }
+    .about-text p {
+        max-width: 100%;
+        text-align: center;
+    }
+    .about-title {
+        text-align: center;
+    }
+    .about-text {
+        margin-bottom: 30px;
+    }
+    .about-sit-places {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .feedback {
+        flex-direction: column;  
+    }
+    .feedback .button {
+        order: 1;
+        margin: 0 0 30px 0;
+    }
+    .form  {
+        margin: 0;
+    }
+    .forms__text {
+        order: 2;
+        max-width: 435px;
+        width: 100%;
+        text-align: center;
+    }
+    .forms-input {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    .forms textarea {
+        width: 100%;
+    }
+    .area {
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .forms {
+        flex-direction: column;
+    }
+    .forms input {
+        width: 100%;
+    }
+    .form:first-child {
+        margin: 0 14px 0 0;
+    }
+    .form {
+        max-width: 193px;
+        width: 100%;
+    }
+@media (max-width:510px) {
+    .header-inner__content {
+        padding: 60px 0;
+    }
+    .history__text p {
+        font-size: 12px;
+        max-width: 210px;
+    }
+    .stars {
+        margin-bottom: 5px;
+        transform: scale(0.4);
+    }
+    .awards-years {
+        font-size: 30px;
+        letter-spacing: 0;
+    }
+    .stars-text {
+        font-size: 14px;
+        text-align: center;
+    }
+    .about-sit-places__text {
+        font-size: 14px;
+    }
+    .forms__text {
+        font-size: 10px;
+    }
+    .forms-input {
+        margin: 0;
+    }
+    .forms input {
+        margin: 0 0 15px 0;
+        flex-direction: column;
+    }
+    .contacts-media {
+        font-size: 10px;
+        letter-spacing: 0;
+    }
+    .copyright {
+        max-width: 106px;
+        font-size: 10px;
+    }
+    .maked {
+        max-width: 60px;
+        font-size: 10px;
+        text-align: right;
+    }
+    
+}
+@media (max-width:440px) {
+    h1 {
+        font-size: 42px;
+    }
+    h2, .donate, .awards, .perfomance, .partners {
+        margin-bottom: 30px;
+    }
+    .about-theatre-inner{
+        padding: 30px 0;
+    }  
+    .form {
+        max-width: 270px;
+        width: 100%;
+    }
+    .form:first-child {
+        margin: 0;
+    }
+    .area {
+        max-width: 270px;
+    }
 }
