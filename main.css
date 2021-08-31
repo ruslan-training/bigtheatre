@@ -11,6 +11,13 @@
 body {
     background: #333333;;
 }
+body a {
+    opacity: .7;
+}
+body a:hover {
+    opacity: 1;
+    transition: opacity .1s ease;
+}
 
 /* container */
 
@@ -104,6 +111,7 @@ h1 {
     letter-spacing: 0.1em;
     line-height: 50px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 /* HEADER content right-side */
@@ -419,6 +427,7 @@ h2 {
 .feedback .button {
     border: 0;
     font-family: "Open Sans Condensed";
+    cursor: pointer;
 }
 
 /* FOOTER */
@@ -622,7 +631,7 @@ h2 {
     }
     .header__burger.active {
         transform: translate(200px, 0px);
-        transition: transform .1s ease;
+        transition: transform .3s ease;
     }
     .header__burger.active::before {
         transform: rotate(45deg);
@@ -655,9 +664,15 @@ h2 {
     }
     .adaptive-icon {
         flex-shrink: 0;
+        transition: transform .2s ease;
     }
     .adaptive-icon:first-child {
         margin: 0 60px 50px 0;
+    }
+    .adaptive-icon:hover {
+        transform: scale(1.2);
+        overflow: hidden;
+        transition: transform .2s ease;
     }
     .about-theatre-inner    {
         padding: 60px 0;
