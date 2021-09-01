@@ -49,21 +49,21 @@
                     </div>
                     <div class="button">афиша</div>
                 </div>
-                <div class="slider">
-                    <div class="slider-img">
+                <div class="header-content">
+                    <div class="header-content__img">
                         <img class="top-img" src="img/header/02.png" alt="">
                         <img class="bot-img" src="img/header/03.png" alt="">
                     </div>
-                    <nav class="slider__nav">
-                        <div class="slide">
-                            <a class="slide__img" href="#">
+                    <nav class="header-slide">
+                        <div class="header-slide__box">
+                            <a class="box-img" href="#">
                                 <img src="img/header/04.svg" alt="">
                             </a>
-                            <div class="slide__text">пред</div>
+                            <div class="box__text">пред</div>
                         </div>
-                        <div class="slide">
-                            <div class="slide__text">след</div>
-                            <a class="slide__img" href="#">
+                        <div class="header-slide__box">
+                            <div class="box__text">след</div>
+                            <a class="box__img" href="#">
                                 <img src="img/header/05.svg" alt="">
                             </a>
                         </div>
@@ -116,53 +116,68 @@
         </div>
     </div>       <!--container-->
 </div>           <!--header-->
-<div class="perfomance">
-    <div class="container _perf">
+<div class="container _perf">
+    <div class="perfomance">
         <h2><span class="gold-text">наши</span> постановки</h2>
-        <div class="perfomance__images">
-            <div class="img-box">
-                <div class="text-preview">
-                    <div class="party">ОСКАР 2020</div> 
-                    <div class="month">сентябрь 2020</div>                     
+        <div class="slider-body">
+            <div class="slider middle">
+                <div class="slides">
+                    <input type="radio" name="r" id="r1" checked>
+                    <input type="radio" name="r" id="r2">
+                    <input type="radio" name="r" id="r3">
+                    <input type="radio" name="r" id="r4">
+ 
+                    <div class="img-box s1">
+                        <div class="text-preview">
+                            <div class="party">ОСКАР 2020</div> 
+                            <div class="month">сентябрь 2020</div>                     
+                        </div>
+                        <div class="slide s1"><img src="img/body/05.png" alt=""></div>
+                        <div class="look">
+                            <img src="img/body/08.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <div class="slide"><img src="img/body/04.png" alt=""></div>
+                            <div class="text-preview">
+                                <div class="party">ОСКАР 2020</div> 
+                                <div class="month">сентябрь 2020</div>                     
+                            </div>
+                            <div class="look">
+                                <img src="img/body/08.svg" alt="">
+                            </div>
+                    </div>
+                    <div class="img-box">
+                        <div class="text-preview">
+                            <div class="party">золотой грамофон</div> 
+                            <div class="month">июль 2020</div>                     
+                        </div>
+                        <div class="slide"><img src="img/body/06.png" alt=""></div>
+                        <div class="look">
+                            <img src="img/body/08.svg" alt="">
+                        </div>
+                    </div> 
+                    <div class="img-box">
+                        <div class="text-preview">
+                            <div class="party">щелкунчик</div> 
+                            <div class="month">май 2020</div>                     
+                        </div>
+                        <div class="slide"><img src="img/body/07.png" alt=""></div>
+                        <div class="look">
+                            <img src="img/body/08.svg" alt="">
+                        </div>
+                    </div> 
                 </div>
-                <a href="#"><img src="img/body/04.png" alt=""></a>
-                <div class="look">
-                    <img src="img/body/08.svg" alt="">
+                <div class="navigation">
+                    <label for="r1" class="bar"></label>
+                    <label for="r2" class="bar"></label>
+                    <label for="r3" class="bar"></label>
+                    <label for="r4" class="bar"></label>
                 </div>
             </div>    
-            <div class="img-box">
-                    <a href="#"><img src="img/body/05.png" alt=""></a>
-                    <div class="text-preview">
-                        <div class="party">ОСКАР 2020</div> 
-                        <div class="month">сентябрь 2020</div>                     
-                    </div>
-                    <div class="look">
-                        <img src="img/body/08.svg" alt="">
-                    </div>
-            </div> 
-            <div class="img-box">
-                <div class="text-preview">
-                    <div class="party">золотой грамофон</div> 
-                    <div class="month">июль 2020</div>                     
-                </div>
-                <a href="#"><img src="img/body/06.png" alt=""></a>
-                <div class="look">
-                    <img src="img/body/08.svg" alt="">
-                </div>
-            </div> 
-            <div class="img-box">
-                <div class="text-preview">
-                    <div class="party">щелкунчик</div> 
-                    <div class="month">май 2020</div>                     
-                </div>
-                <a href="#"><img src="img/body/07.png" alt=""></a>
-                <div class="look">
-                    <img src="img/body/08.svg" alt="">
-                </div>
-            </div>
         </div>
     </div>    
-</div>
+</div>    
 <div class="awards">
     <div class="container _award">
         <div class="awards-inner">
@@ -275,6 +290,4 @@
 </div>
 </body>
 
-</html>      
-    
-    
+</html>
