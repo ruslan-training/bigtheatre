@@ -680,8 +680,10 @@ input[name="r"] {
         top: -100%;
         position: fixed;
         width: 300px;
-        height: 800px;
+        height: 100%;
         transition: all 0.3s ease 0s;
+        overflow: auto;
+        z-index: 1;
         
         display: none;
     }
@@ -907,5 +909,11 @@ input[name="r"] {
     }
     .area {
         max-width: 270px;
+    }
+    .img-box img {
+        max-width: 300px;
+    }
+    .slider {
+        max-width: 300px;
     }
 }
